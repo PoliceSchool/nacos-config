@@ -1,0 +1,15 @@
+server:
+  port: 56020
+
+spring:
+  application:
+    name: service2
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: d98d1272-87b8-41de-bb65-0ea9dcf316c9
+        group: TEST_GROUP
+        shared-dataids: ext-config-common01.properties, ext-config-common02.properties, ext-config-common03.properties
+        refreshable-dataids: ext-config-common01.properties

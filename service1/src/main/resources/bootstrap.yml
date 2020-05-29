@@ -1,0 +1,23 @@
+server:
+  port: 56010
+
+spring:
+  application:
+    name: service1
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848, 127.0.0.1:8849, 127.0.0.1:8850
+        file-extension: yaml
+        namespace: d98d1272-87b8-41de-bb65-0ea9dcf316c9
+        group: TEST_GROUP
+        ext-config[0]:
+          data-id: ext-config-common01.properties
+        ext-config[1]:
+          data-id: ext-config-common02.properties
+          group: GLOBALE_GROUP
+        ext-config[2]:
+          data-id: ext-config-common03.properties
+          group: REFRESH_GROUP
+          refresh: true  #动态刷新
+#        enabled: false #关闭配置
